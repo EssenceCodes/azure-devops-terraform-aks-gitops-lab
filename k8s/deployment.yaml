@@ -17,7 +17,7 @@ spec:
       containers:
         - name: flask-api
           # Replace this with your ACR image URL in Step 22
-          image: flask-api:latest
+          image: acraksutai.azurecr.io/flask-api:v2
           ports:
             - containerPort: 8080
           readinessProbe:
