@@ -1,3 +1,14 @@
+# Azure authentication variables (used in providers.tf)
+variable "subscription_id" {
+  description = "The Azure subscription ID to use for this deployment."
+  type        = string
+}
+
+variable "tenant_id" {
+  description = "The Azure tenant ID to use for this deployment."
+  type        = string
+}
+
 variable "resource_group_name" {
   default = "rg-aks-lab"
 }
