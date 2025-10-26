@@ -43,6 +43,6 @@ jobs:
       - name: Deploy to AKS
         run: |
           kubectl set image deployment/flask-api \
-            flask-api-container=$ACR_LOGIN_SERVER/$IMAGE_NAME:${{ github.sha }} \
+            flask-api=$ACR_LOGIN_SERVER/$IMAGE_NAME:${{ github.sha }} \
             -n default
           kubectl rollout status deployment/flask-api -n default
