@@ -16,6 +16,6 @@ spec:
     spec:
       containers:
       - name: flask-api
-        image: acraksutai.azurecr.io/flask-api:<commit-sha>
+        image: acraksutai.azurecr.io/flask-api:v2
         ports:
         - containerPort: 5000
