@@ -42,12 +42,12 @@ jobs:
         run: |
           az aks get-credentials --resource-group $RESOURCE_GROUP --name $AKS_CLUSTER --overwrite-existing
 
-      - name: Deploy to AKS
-        run: |
-          kubectl set image deployment/flask-api \
-            flask-api=$ACR_LOGIN_SERVER/$IMAGE_NAME:${{ github.sha }} \
-            -n default
-          kubectl rollout status deployment/flask-api -n default
+   #   - name: Deploy to AKS
+   #     run: |
+   #       kubectl set image deployment/flask-api \
+   #         flask-api=$ACR_LOGIN_SERVER/$IMAGE_NAME:${{ github.sha }} \
+   #         -n default
+   #       kubectl rollout status deployment/flask-api -n default
 
       - name: Update image tag in GitOps repo
         run: |
